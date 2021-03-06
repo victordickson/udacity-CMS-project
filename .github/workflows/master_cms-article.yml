@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -31,4 +32,4 @@ jobs:
       with:
         app-name: 'cms-article'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_fdfac61877a146ed869cc9f1b751043d }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_99eaf5da8ca74f098ac0baa98860b6db }}
