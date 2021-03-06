@@ -6,13 +6,13 @@ class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret-key'
 
     BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'cmsarticle'
-    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') 
+    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'fxSt49hDPPKnQPAtTyyG6UuG30q2xRuOWn8FXd/RJxZbRzVCwkOMSQYypCIJCyRps412fzCKBI3s8OkQfT+1Gg=='
     BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'images'
 
     SQL_SERVER = os.environ.get('SQL_SERVER') or 'cms-article-sql-server.database.windows.net'
     SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'cms-article'
     SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'server'
-    SQL_PASSWORD = os.environ.get('SQL_PASSWORD') 
+    SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or 'pass1234*#'
     # Below URI may need some adjustments for driver version, based on your OS, if running locally
     SQLALCHEMY_DATABASE_URI = 'mssql+pyodbc://' + SQL_USER_NAME + '@' + SQL_SERVER + ':' + SQL_PASSWORD + '@' + SQL_SERVER + ':1433/' + SQL_DATABASE  + '?driver=ODBC+Driver+17+for+SQL+Server'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
